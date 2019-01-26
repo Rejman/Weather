@@ -1,0 +1,31 @@
+{% extends 'weather/base.html' %}
+{% block content %}
+</br>
+	<div class="row">
+	<div class="col">
+	<div class="jumbotron">
+	  <h1 class="display-4">Pogoda w Rzeszowie</h1>
+	  <p class="lead">prognoza z danych historycznych</p>
+	  <hr class="my-4">
+	  <p>Zobacz przewidywaną temperaturę oraz prawdopodobieństwo opadów na ten miesiądz (ddd)</p>
+	  <a class="btn btn-primary btn-lg" href="#" role="button">Sprawdź</a>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col">
+		<div class="display-4">archiwum pogodowe</div>
+		</div>
+	</div>
+	<div class="row">
+	{% for year in years %}
+		<div class="col-sm-4">
+			<a href="{% url 'weather:year' year %}" style="text-decoration:none">
+				<div  class="box">
+					{{year}} r.
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,78 @@
+﻿{% extends 'weather/base.html' %}
+{% block content %}
+<div class="row">
+	<div class="col-sm-6">
+		<div class="display-4">Dane na rok {{year}}</div>
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-sm-6">
+		<canvas id="temp" width="400" height="400" ></canvas>
+	</div>
+	<div class="col-sm-6">
+		<canvas id="fall" width="400" height="400" ></canvas>
+	</div>
+</div>
+
+<script>
+
+
+
+var months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+var ctx = document.getElementById("temp").getContext('2d');
+var temp = new Chart(ctx, {
+    type: 'line',
+    data: {
+
+		labels: months,
+        datasets: [{
+            label: 'srednia temperatura (°C)',	
+            data: {{temperatures}},
+            backgroundColor: 'rgba(240, 173, 78, 0.5)',
+            borderColor: '#d9534f',
+			
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+		
+    }
+});
+
+
+var cty = document.getElementById("fall").getContext('2d');
+var temp = new Chart(cty, {
+    type: 'bar',
+    data: {
+		labels: months,
+        datasets: [{
+            label: 'ilość dni z opadem',
+            data: {{falls}},
+            backgroundColor:'rgba(91, 192, 222,0.5)',
+            borderColor: '#0275d8',
+			hoverBorderColor: '#292b2c',
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+		
+    }
+});
+Chart.default.global.defaultFontSize = 100;
+</script>
+{%endblock%}
