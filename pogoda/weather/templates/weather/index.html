@@ -7,8 +7,25 @@
 	  <h1 class="display-4">Pogoda w Rzeszowie</h1>
 	  <p class="lead">prognoza z danych historycznych</p>
 	  <hr class="my-4">
-	  <p>Zobacz przewidywaną temperaturę oraz prawdopodobieństwo opadów na ten miesiądz (ddd)</p>
-	  <a class="btn btn-primary btn-lg" href="#" role="button">Sprawdź</a>
+	  <p>Zobacz przewidywaną temperaturę oraz prawdopodobieństwo opadów na ten miesiądz ({{now}})</p>
+	  
+	  <dir class="container">
+		<dir class="row">
+			<dir class="col-sm-6">
+				<dir class="prediction" class="temp">
+				Średnia temeperatura:<br>
+				<h1>{{temperature}} °C</h1>
+				</dir>
+			</dir>
+			<dir class="col-sm-6">
+				<dir class="prediction" class="fall">
+				Prawdopodobieństwo opadów:<br>
+				<h1>{{fall}} %</h1>
+				</dir>
+			</dir>
+		</dir>
+	  </dir>
+	  
 	</div>
 	</div>
 	</div>

@@ -18,7 +18,10 @@
 	
 <style>
 
-
+	.prediction{
+		background-color: rgba(2, 117, 216, 0.5);
+		padding: 20px;
+	}
 	.box{
 		border: 0px solid black;
 		border-radius: 10px;
@@ -76,17 +79,8 @@
             <h5 class="text-uppercase">Menu</h5>
 
             <ul class="list-unstyled">
-                            <li>
-                <a href="<a href="{% url 'weather:index' %}">Strona główna</a>
-              </li>
               <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
+                <a href="{% url 'weather:index' %}">Strona główna</a>
               </li>
             
             </ul>
@@ -103,7 +97,7 @@
             <ul class="list-unstyled">
 
 			  <li>
-                <a href="https://github.com/Rejman/pogoda">GitHub</a>
+                <a href="https://github.com/Rejman/Weather">GitHub</a>
               </li>			  
 			  <li>
                 <a href="https://www.djangoproject.com/">Django</a>
