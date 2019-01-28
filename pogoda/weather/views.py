@@ -14,7 +14,7 @@ def index(request):
         years.append(year)
     years.sort()
 
-    trials = Trial.objects.filter(month=int(now))
+    trials = Trial.objects.filter(month=now)
     months = {
         "01":["Styczeń", 31],
         "02":["Luty", 30],
