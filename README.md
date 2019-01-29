@@ -1,8 +1,8 @@
-# Opis projektu
+## Opis projektu
 
 Celem projektu było stworzenie aplikacji webowej opartej na technologii Django. Aplikacja ma służyć do predykcji i wizualizacji pogody na podstawie danych historycznych.  Projekt ten został zrealizowany na potrzeby przedmiotu Aplikacje internetowe 2.
 
-# Wymagania Systemowe
+## Wymagania Systemowe
 
 Aby uruchomić aplikację na komputerze musimy mieć zainstalowany Python 3.6. oraz freamwork „Django”. Instalujemy go polenieniami:
 py -m pip install --upgrade pip
@@ -30,7 +30,7 @@ Lokalna baza danych pogody dla miasta Rzeszów zawiera takie informacje jak: śr
 Program sprawdza aktualny miesiąc i na podstawie bazy danych – wylicza średnią temperaturę wszystkich temperatur z wcześniejszych lat dla tego miesiąca.
 Podobnie wyliczana jest predykcja opadów. Wynik jest podawany w procentach. Średnia ilość dni z opadem jest dzielona na ilość dni danego miesiąca – w ten sposób otrzymujemy prawdopodobieństwo opadów na aktualny miesiąc.
 
-- Technologie
+## Technologie
 W realizacji aplikacji wykorzystano następujące technologie oraz narzędzia:
 - Python 
 To język skryptowy, interpretowany - co oznacza, że piszemy skrypt a następnie wykonujemy go za pomocą interpretera. Python jest łatwy w nauce, lecz mimo to jest bardzo potężny. Działa na wielu systemach, w tym na systemach wbudowanych.
